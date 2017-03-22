@@ -1,0 +1,124 @@
+% !TEX encoding = UTF-8 Unicode
+\documentclass[twoside,twocolumn,a4paper,12pt,english]{article}
+\usepackage[utf8]{inputenc}
+
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\linespread{1.2} % Line spacing - Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[english]{babel} % Language hyphenation and typographical rules
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+\usepackage[hang, small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under/above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+
+\usepackage{enumitem} % Customized lists
+\setlist[itemize]{noitemsep} % Make itemize lists more compact
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} % Set the "Abstract" text to bold
+\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\roman{subsection}} % roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyfoot[RO,LE]{\thepage} % Custom footer text
+
+\usepackage{titling} % Customizing the title section
+
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\setlength{\droptitle}{-4\baselineskip} % Move the title up
+
+\pretitle{\begin{center}\Huge\bfseries} % Article title formatting
+\posttitle{\end{center}} % Article title closing formatting
+\title{Project Plan: Assessing Knowledge Through Written Reviews} % Article title
+\author{%
+\textsc{Emil Folino}\\
+\normalsize Blekinge Tekniska Högskola \\ % Your institution
+}
+\date{\today} % Leave empty to omit a date
+\renewcommand{\maketitlehookd}{%
+}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+% Print the title
+\maketitle
+
+%----------------------------------------------------------------------------------------
+%	ARTICLE CONTENTS
+%----------------------------------------------------------------------------------------
+
+\section{Background}
+When evaluating students in programming and computer science courses it is often easy to do a quantitative evaluation and assessment. Have the student completed the assigned tasks? However assessing the comprehension and understanding of the completed assignments and doing a qualitative evaluation of the student is harder \cite{biggs1982evaluation}. In \cite{lister2006not} Lister et al. conclude that the experienced programmers answered with SOLO relational responses compared to the novice programmers multistructural responses.
+
+By assigning students a written review assignment together with programming assignments it is easier to assess the students comprehension and understanding of the completed assignments\cite{lister2006not}. In our daily teaching at Webbprogramming (dbwebb.se) at BTH the students do programming assignments each week. Together with the exercises they hand in a written review, answering 3-5 questions centered around the topics of the week. At the end of each study period, a 10 week period, the students hand in a project together with an extended review text. The weekly review text have given the students practice in writing the final project review text that the students are graded on. The following webpages from the program's website explains how the students are graded on their review texts according to the SOLO Taxonomy: \cite{redovisning} and \cite{solo}.
+
+
+
+%------------------------------------------------
+
+\section{Research Questions}
+
+Have the students understanding of programming evolved during three study periods of courses? \\ \\
+How does the final grade in the courses correlate with the written review texts?\\ \\
+How do we use the review texts as a part of our improvement process as teachers?
+
+
+
+%------------------------------------------------
+
+\section{Purpose \& Goals}
+To see if the students are learning and understanding of the material and assignments. To see if the students have improved at writing review texts after three study periods, in total 36 weekly assignments together with six projects.
+
+
+
+%------------------------------------------------
+
+\section{Method}
+To keep the project at a manageable level I will only use the review texts of the projects for three courses. One in each study period: htmlphp, javascript1 and linux. These are the only review texts that the students are graded on together with the project assignment.
+
+The SOLO grading of the review texts will be done by the author. To ensure an even level af grading the other teachers of the courses are going to do a similar grading and evaluation of a subset of the review texts. After the SOLO grading I will compare the final grade of the course to the SOLO grade. By comparing the final grade given in the course to the SOLO grading I will look for a correlation between the understanding of the programming and how that translates to the grades.
+
+In this project the students are given a grade of 1-5 according to the five levels of the SOLO Taxnomy. The SOLO grading will be done manually by reading the review texts, the SOLO grading will be done anonymously, but traceable.
+
+I have built a web scraper that automatically gets the review texts and stores the text in a database. Together with the web scraper I will build a web interface where I will see the review text and a form for SOLO grading the students' text. After the data collection and SOLO grading I will plot the findings to look for trends.
+
+
+
+%------------------------------------------------
+
+\section{Timeplan}
+\textbf{March 1\textsuperscript{st}:} Finished Project Plan and web scraping program.\\
+\textbf{April 10\textsuperscript{th}:} Finished grading as the linux course is handed in on march 20th.\\
+\textbf{April 19\textsuperscript{th}:} First time draft contains all data.\\
+\textbf{May 21\textsuperscript{st}:} Submit abstract for Lärarlärdom.\\
+\textbf{June 2\textsuperscript{nd}:} Hand in the finished report.\\
+
+%----------------------------------------------------------------------------------------
+%	REFERENCE LIST
+%----------------------------------------------------------------------------------------
+
+\bibliographystyle{vancouver}
+\bibliography{references}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}

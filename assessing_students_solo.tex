@@ -1,0 +1,169 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Journal Article
+% LaTeX Template
+% Version 1.4 (15/5/16)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Frits Wenneker (http://www.howtotex.com) with extensive modifications by
+% Vel (vel@LaTeXTemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+% !TEX encoding = UTF-8 Unicode
+\documentclass[twoside,twocolumn,a4paper,11pt,english]{article}
+\usepackage[utf8]{inputenc}
+
+\usepackage{blindtext} % Package to generate dummy text throughout this template
+
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\linespread{1.12} % Line spacing - Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[english]{babel} % Language hyphenation and typographical rules
+
+\usepackage[hmarginratio=1:1,left=18mm,right=18mm,top=24mm,columnsep=20pt]{geometry} % Document margins
+\usepackage[hang, small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under/above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+
+\usepackage{enumitem} % Customized lists
+\setlist[itemize]{noitemsep} % Make itemize lists more compact
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} % Set the "Abstract" text to bold
+\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\roman{subsection}} % roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{Assessing Knowledge Through Written Reviews $\bullet$ Emil Folino $\bullet$ BTH} % Custom header text
+\fancyfoot[RO,LE]{\thepage} % Custom footer text
+
+\usepackage{titling} % Customizing the title section
+
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\setlength{\droptitle}{-4\baselineskip} % Move the title up
+
+\pretitle{\begin{center}\LARGE\bfseries} % Article title formatting
+\posttitle{\end{center}} % Article title closing formatting
+\title{Assessing Knowledge Through Written Reviews} % Article title
+\author{%
+\textsc{Emil Folino} % Your name
+\normalsize Blekinge Tekniska Högskola \\ % Your institution
+\normalsize \href{mailto:emil.folino@bth.se}{emil.folino@bth.se} % Your email address
+}
+\date{\today} % Leave empty to omit a date
+\renewcommand{\maketitlehookd}{%
+\begin{abstract}
+\noindent In this paper a method of qualitative assessment of programming student is investigated.
+\end{abstract}
+}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+% Print the title
+\maketitle
+
+%----------------------------------------------------------------------------------------
+%	ARTICLE CONTENTS
+%----------------------------------------------------------------------------------------
+
+\section{Introduction}
+
+\lettrine[nindent=0em,lines=3]{E} valuating students in programming and computer science courses it is often easy to do a quantitative evaluation and assessment. Have the student completed the assigned tasks? However assessing the comprehension and understanding of the completed assignments and doing a qualitative evaluation of the student is harder \cite{biggs1982evaluation}.
+
+By assigning students a written review assignment together with programming assignments it is easier to assess the students comprehension and understanding of the completed assignments\cite{lister2006not}.
+
+In \cite{lister2006not} Lister et al. conclude that the experienced programmers answered with SOLO relational responses compared to the novice programmers multi-structural responses.
+
+
+%------------------------------------------------
+
+\section{Method}
+
+In our daily teaching at Webbprogramming (dbwebb.se) at BTH the students do programming assignments each week. Together with the exercises they hand in a written review, answering 3-5 questions centered around the topics of the week. At the end of each study period, a 10 week period, the students hand in a project together with an extended review text. The weekly review text have given the students practice in writing the final project review text that the students are graded on. The following web pages from the program's website explains how the students are graded on their review texts according to the SOLO Taxonomy: \cite{redovisning} and \cite{solo}.
+
+I will only use the review texts of the projects for three courses. One in each study period: htmlphp, javascript1 and linux. These are the only review texts that the students are graded on together with the project assignment.
+
+The SOLO grading of the review texts will be done by the author. To ensure an even level of grading the other teachers of the courses are going to do a similar grading and evaluation of a subset of the review texts. After the SOLO grading I will compare the final grade of the course to the SOLO grade. By comparing the final grade given in the course to the SOLO grading I will look for a correlation between the understanding of the programming and how that translates to the grades.
+
+In this project the students are given a grade of 1-5 according to the five levels of the SOLO Taxnomy. The SOLO grading will be done manually by reading the review texts, the SOLO grading will be done anonymously, but traceable.
+
+I have built a web scraper that automatically gets the review texts and stores the text in a database. Together with the web scraper I will build a web interface where I will see the review text and a form for SOLO grading the students' text. After the data collection and SOLO grading I will plot the findings to look for trends.
+
+%------------------------------------------------
+
+\section{Results}
+
+\begin{table}
+\caption{Example table}
+\centering
+\begin{tabular}{llr}
+\toprule
+\multicolumn{2}{c}{Name} \\
+\cmidrule(r){1-2}
+First name & Last Name & Grade \\
+\midrule
+John & Doe & $7.5$ \\
+Richard & Miles & $2$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\blindtext % Dummy text
+
+\begin{equation}
+\label{eq:emc}
+e = mc^2
+\end{equation}
+
+\blindtext % Dummy text
+
+%------------------------------------------------
+
+\section{Discussion}
+
+\subsection{Subsection One}
+
+A statement requiring citation.
+\blindtext % Dummy text
+
+\subsection{Subsection Two}
+
+\blindtext % Dummy text
+
+%----------------------------------------------------------------------------------------
+%	REFERENCE LIST
+%----------------------------------------------------------------------------------------
+
+\bibliographystyle{vancouver}
+\bibliography{references}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
