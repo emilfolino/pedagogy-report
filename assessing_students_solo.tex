@@ -61,7 +61,11 @@
 \date{\today} % Leave empty to omit a date
 \renewcommand{\maketitlehookd}{%
 \begin{abstract}
+<<<<<<< Updated upstream
 \noindent In this paper a method of qualitative assessment of programming student is investigated. The qualitative assessment is done by reading students' review text from individual programming projects and analyzing the content according to the SOLO taxonomy.
+=======
+\noindent In this paper a method of qualitative assessment of programming students is investigated. The qualitative assessment is done by reading students' review text from a programming project and analyzing the text according to the SOLO taxonomy.
+>>>>>>> Stashed changes
 \end{abstract}
 }
 
@@ -78,19 +82,19 @@
 
 \section{Introduction}
 
-\lettrine[nindent=0em,lines=3]{Q}uantitatively assessing students in programming and computer science courses is often easy to do. Have the student completed the assigned tasks? Does the application work as it is supposed to do? Does any tests fail? Are there completed test coverage? However assessing the comprehension and understanding of the completed assignments and doing a qualitative evaluation of the student is harder \cite{biggs1982evaluation}.
+\lettrine[nindent=0em,lines=3]{Q}uantitatively assessing students in programming and computer science courses is often easy to do. Have the student completed the assigned tasks? Does the application work as it is supposed to do? Does any software tests fail? However assessing the comprehension and understanding of the completed assignments and doing a qualitative evaluation of the student is harder \cite{biggs1982evaluation}. The SOLO Taxonomy was proposed by Biggs and Collis in 1982 and is abbreviated from Structure of the Observed Learning Outcome. The taxonomy is used to qualitatively assess students' work. The SOLO taxonomy consists of five levels of understanding: Prestructural, Unistructural, Multistructural, Relational, and Extended Abstract. In section \ref{sec:examples} the five levels of understanding will be exemplified by the students' review texts.
 
 ## More references to quantitative assessments. To show that alot of work has been done there. And not much in qualitative assessment.
 
 There have been limited research in the field of qualitative assessment of programming students. In \cite{mccracken2001multi} McCracken et al. evaluated and first year Computer Science students' programming competency. A framework outlining the expectations of first year Computer Science  students are proposed. However the assessment is only done in a quantitative way and there are no recommendations for any qualitative assessment method.
 
-In \cite{lister2006not} Lister et al. conclude that the experienced programmers answered with SOLO relational responses compared to the novice programmers multi-structural responses. Lister et al. recommend that the students are given written assignments together with the programming making it easier to evaluate to understanding and comprehension the students have gained in programming courses.
+In \cite{lister2006not} Lister et al. conclude that the experienced programmers answered with SOLO relational responses compared to the novice programmers multi-structural responses. Lister et al. recommend that the students are given written assignments together with programming assignments making it easier to evaluate th understanding and comprehension the students obtains in programming courses.
 
 
 
 %------------------------------------------------
 
-\section{Examples of SOLO levels}
+\section{Examples of SOLO levels} \label{sec:examples}
 
 In this section examples of how the review texts are mapped to each level of the SOLO taxonomy are shown.
 
@@ -112,7 +116,10 @@ In this section examples of how the review texts are mapped to each level of the
 
 In our daily teaching at Webbprogramming (dbwebb.se) at BTH the students do programming assignments each week. Together with the exercises they hand in a written review, answering 3-5 questions centered around the topics and assignments of the week. At the end of each study period, a 10 week period, the students hand in an individual project together with an extended review text. The students are graded both with regards to the completed work and the review texts. The following web pages from the program's website explains how the students are graded on their review texts according to the SOLO Taxonomy: \cite{redovisning} and \cite{solo}.
 
-In this report the review texts of three subsequent course projects are analyzed and SOLO graded. The students are given a grade of 1-5 according to the five levels of the SOLO Taxonomy. The SOLO grading will be done manually by reading the review texts and the SOLO grading will be done anonymously, but traceable. The SOLO grading of the review texts will be done by the author. To ensure an even level of grading the other teachers of the courses are going to do a similar grading and evaluation of a subset of the review texts.
+
+In this report the review texts of three subsequent course projects are analyzed and SOLO graded. The students are given a grade of 1-5 according to the five levels of the SOLO Taxonomy. The SOLO grading will be done manually by reading the review texts and the SOLO grading will be done anonymously, but traceable.
+
+The SOLO grading of the review texts will be done by the author. To ensure an even level of grading the other teachers of the courses are going to do a similar grading and evaluation of a subset of the review texts.
 
 The collection of review texts is done with a web scraper implemented in python. The web scraper fetches the review texts from the students published projects. The review texts are stored in a database together with the website url of the published project and a traceable reference to the student. The review texts are fetched in a manner that removes the names and student acronyms from the review texts to ensure anonymity in most cases.
 
@@ -122,7 +129,7 @@ After the review texts have been analyzed and SOLO graded the SOLO grade will be
 
 As the review texts are taken from three subsequent courses the evolution of the students' understanding of the course material and programming in general can be investigated.
 
-The web scraper and analysis web form can be found at the authors Github page \footnote{https://github.com/emilfolino/pedagogy}.
+The web scraper and analysis web form can be found at the author's Github page \footnote{https://github.com/emilfolino/pedagogy}.
 
 
 
