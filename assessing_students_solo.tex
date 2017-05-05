@@ -18,8 +18,6 @@
 \usepackage[hang, small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under/above floats in tables or figures
 \usepackage{booktabs} % Horizontal rules in tables
 
-\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
-
 \usepackage{enumitem} % Customized lists
 \setlist[itemize]{noitemsep} % Make itemize lists more compact
 
@@ -79,14 +77,17 @@
 %----------------------------------------------------------------------------------------
 
 \section{Introduction}
+Quantitatively assessing students in programming and computer science courses is often easy to do. Have the student completed the assigned tasks? Does the application work as it is supposed to do? Does any software tests fail? However assessing the comprehension and understanding of the completed assignments and doing a qualitative evaluation of the student is harder \cite{biggs1982evaluation}. The SOLO Taxonomy was proposed by Biggs and Collis in 1982 and is abbreviated from Structure of the Observed Learning Outcome. The taxonomy is used to qualitatively assess students' work. The SOLO taxonomy consists of five levels of understanding: Prestructural, Unistructural, Multistructural, Relational, and Extended Abstract. In section \ref{sec:examples} the five levels of understanding will be exemplified by the students' review texts.
 
-\lettrine[nindent=0em,lines=3]{Q}uantitatively assessing students in programming and computer science courses is often easy to do. Have the student completed the assigned tasks? Does the application work as it is supposed to do? Does any software tests fail? However assessing the comprehension and understanding of the completed assignments and doing a qualitative evaluation of the student is harder \cite{biggs1982evaluation}. The SOLO Taxonomy was proposed by Biggs and Collis in 1982 and is abbreviated from Structure of the Observed Learning Outcome. The taxonomy is used to qualitatively assess students' work. The SOLO taxonomy consists of five levels of understanding: Prestructural, Unistructural, Multistructural, Relational, and Extended Abstract. In section \ref{sec:examples} the five levels of understanding will be exemplified by the students' review texts.
+% More references to quantitative assessments. To show that alot of work has been done there. And not much in qualitative assessment.
 
-## More references to quantitative assessments. To show that alot of work has been done there. And not much in qualitative assessment.
 
-There have been limited research in the field of qualitative assessment of programming students. In \cite{mccracken2001multi} McCracken et al. evaluated and first year Computer Science students' programming competency. A framework outlining the expectations of first year Computer Science  students are proposed. However the assessment is only done in a quantitative way and there are no recommendations for any qualitative assessment method.
 
-In \cite{lister2006not} Lister et al. conclude that the experienced programmers answered with SOLO relational responses compared to the novice programmers multi-structural responses. Lister et al. recommend that the students are given written assignments together with programming assignments making it easier to evaluate th understanding and comprehension the students obtains in programming courses.
+In \cite{mccracken2001multi} McCracken et al. evaluated and first year Computer Science students' programming competency. A framework outlining the expectations of first year Computer Science  students are proposed. However the assessment is only done in a quantitative way and there are no recommendations for any qualitative assessment method.
+
+Paulo Blikstein \cite{Blikstein} uses snapshots of students' code during a programming assignment together with data mining to automate a technique to assess and analyze students learning programming. It is concluded that together with other data sources (Blikstein propose interviews, tests and surveys) the automated assessment can give insights into the understanding of the learing of programming.
+
+In \cite{lister2006not} Lister et al. looks at written and think-aloud responses to exam questions. Lister et al. conclude that experienced programmers more frequently answered with SOLO relational responses compared to the novice programmers multi-structural responses. Lister et al. recommend that the students are given written assignments together with programming assignments making it easier to evaluate the understanding and comprehension the students obtain in programming courses.
 
 
 
@@ -94,7 +95,7 @@ In \cite{lister2006not} Lister et al. conclude that the experienced programmers 
 
 \section{Examples of SOLO levels} \label{sec:examples}
 
-In this section examples of how the review texts are mapped to each level of the SOLO taxonomy are shown.
+In this section examples of how the review texts are mapped to each level of the SOLO taxonomy are shown. The review texts have been translated from Swedish to English by the author. The original Swedish texts are found in appendix \ref{app:original}.
 
 \subsection{Prestructural}
 
@@ -102,25 +103,39 @@ No answer more than repeating the question. The student is failed based on the t
 
 \subsection{Unistructural}
 
-Sökfunktionen finns som egen sida(via navbar) där man kan söka i artiklar och i objektsbeskrivningar med ett ord som utgörs av bokstäver(a-ö) och siffror(0-9). Träffarna presenteras i en lista och första träffen i en artikel/objekt markeras med gult och del av texten.
+The answer contains no technical description of how the solutions have been implemented.
+\\
+\\
+\textbf{Example:} ``The search feature has it's own page (accessible from the navbar) where you can search for articles and object descriptions with a word consisting of letters(a-ö) and numbers(0-9). The search results are presented in a list and the first result in an article/object description is marked with and part of the text.''
 
 \subsection{Multistructural}
 
-För varje varv i loopen appendas ett object till salar.json. Så när loopen är färdig så var det bara att lägga till de sista paranteserna och städa upp filen så att det skulle validera som JSON. Jag tyckte detta krav var ganska krångligt och min läsning är absolut inte den snabbaste men den gjorde vad den skulle och det fick vara bra nog.
-
-Jag har försökt att använda mycket inbyggda metoder som 'map', 'reduce', 'filter', etc. för att få ut rätt information från de arrays jag använder.
+The student give a technical explanation of the implementation, more or less line by line and does not relate the implementation to other parts of the code or prior exercises in the courses.
+\\
+\\
+\textbf{Examples:} ``For every iteration in the loop an object is appended to slar.json. So when the loop is done it was just adding the last parenthesis and clean the file so it is valid JSON. I thought this requirement was kind of complicated and my solution is absolutely not the fastest but it does what it is supposed to do and that should suffice.''
+\\
+\\
+``I have tried to use a lot of built-in functions like 'map', 'reduce', 'filter', etc. to get the correct information from the arrays I use.''
 
 \subsection{Relational}
 
-Valde att inte dela upp min klient som det är gjort i Gomoku. Jag vet att anledningen var för att kunna hålla isär generell och domänspecifik kod, men eftersom jag inte tänkt bygga vidare på den här klienten så lägger jag allt i samma.
+The student give a technical explanation of the implementation and justifies their choices through related course material or real-world examples.
+\\
+\\
+\textbf{Examples:} ``I chose to not split my client as it is done in the Gomoku assignment \footnote{A programming assignment earlier in the course}. I know that the reason is to separate general and domain-specific code, but I am not going to extend on this client so I have decided to put all the code in the same file.''
+\\
+\\
+``When i decided on the style for the page i looked at other websites with a connection to funerals.''
+\\
+\\
+``With earlier assignments' clients as a base I did a client that tests the server.''
 
-När jag bestämde stil för sidan kollade jag runt lite på andra webbplatser som har en koppling till begravningar.
 
-Med tidigare uppgifters klienter som grund gjorde jag en klient som kan testa servern.
 
 \subsection{Extended Abstract}
 
-No examples of Extended Abstract texts were found in the review texts. The students are first-year students and are not asked to come with original material.
+No examples of Extended Abstract texts were found in the review texts. The students are first-year students and are not asked to produce novel material.
 
 
 
@@ -129,7 +144,6 @@ No examples of Extended Abstract texts were found in the review texts. The stude
 \section{Method}
 
 In our daily teaching at Webbprogramming (dbwebb.se) at BTH the students do programming assignments each week. Together with the exercises they hand in a written review, answering 3-5 questions centered around the topics and assignments of the week. At the end of each study period, a 10 week period, the students hand in an individual project together with an extended review text. The students are graded both with regards to the completed work and the review texts. The following web pages from the program's website explains how the students are graded on their review texts according to the SOLO Taxonomy: \cite{redovisning} and \cite{solo}.
-
 
 In this report the review texts of three subsequent course projects are analyzed and SOLO graded. The students are given a grade of 1-5 according to the five levels of the SOLO Taxonomy. The SOLO grading will be done manually by reading the review texts and the SOLO grading will be done anonymously, but traceable.
 
@@ -196,5 +210,42 @@ Thanks to Mikael Roos, Kenneth Lewenhagen, and Andreas Arnesson of Webbprogramme
 \bibliography{references}
 
 %----------------------------------------------------------------------------------------
+
+\appendix
+
+\section{Original Swedish Texts} \label{app:original}
+
+Below are the original Swedish review texts and their corresponding English translations.
+\\
+\\
+\textbf{Original Swedish Text:} Sökfunktionen finns som egen sida(via navbar) där man kan söka i artiklar och i objektsbeskrivningar med ett ord som utgörs av bokstäver(a-ö) och siffror(0-9). Träffarna presenteras i en lista och första träffen i en artikel/objekt markeras med gult och del av texten.
+\\
+\textbf{Translation:} The search feature has it's own page (accessible from the navbar) where you can search for articles and object descriptions with a word consisting of letters(a-ö) and numbers(0-9). The search results are presented in a list and the first result in an article/object description is marked with and part of the text.
+\\
+\\
+\textbf{Original Swedish Text:} För varje varv i loopen appendas ett object till salar.json. Så när loopen är färdig så var det bara att lägga till de sista paranteserna och städa upp filen så att det skulle validera som JSON. Jag tyckte detta krav var ganska krångligt och min läsning är absolut inte den snabbaste men den gjorde vad den skulle och det fick vara bra nog.
+\\
+\textbf{Translation:} For every iteration in the loop an object is appended to slar.json. So when the loop is done it was just adding the last parenthesis and clean the file so it is valid JSON. I thought this requirement was kind of complicated and my solution is absolutely not the fastest but it does what it is supposed to do and that should suffice.
+\\
+\\
+\textbf{Original Swedish Text:} Jag har försökt att använda mycket inbyggda metoder som 'map', 'reduce', 'filter', etc. för att få ut rätt information från de arrays jag använder.
+\\
+\textbf{Translation:} I have tried to use a lot of built-in functions like 'map', 'reduce', 'filter', etc. to get the correct information from the arrays I use.
+\\
+\\
+\textbf{Original Swedish Text:} Valde att inte dela upp min klient som det är gjort i Gomoku. Jag vet att anledningen var för att kunna hålla isär generell och domänspecifik kod, men eftersom jag inte tänkt bygga vidare på den här klienten så lägger jag allt i samma.
+\\
+\textbf{Translation:} I chose to not split my client as it is done in the Gomoku assignment \footnote{A programming assignment earlier in the course}. I know that the reason is to separate general and domain-specific code, but I am not going to extend on this client so I have decided to put all the code in the same file.
+\\
+\\
+\textbf{Original Swedish Text:} När jag bestämde stil för sidan kollade jag runt lite på andra webbplatser som har en koppling till begravningar.
+\\
+\textbf{Translation:} When i decided on the style for the page i looked at other websites with a connection to funerals.
+\\
+\\
+\textbf{Original Swedish Text:} Med tidigare uppgifters klienter som grund gjorde jag en klient som kan testa servern.
+\\
+\textbf{Translation:} With earlier assignments' clients as a base I did a client that tests the server.
+
 
 \end{document}
