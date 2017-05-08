@@ -45,6 +45,7 @@
 \usepackage{textcomp}
 \usepackage{tikz}
 \usepackage{pgfplots}
+\usepackage{float}
 
 
 %----------------------------------------------------------------------------------------
@@ -146,11 +147,11 @@ No examples of Extended Abstract texts were found in the review texts. The stude
 
 In our daily teaching at Webbprogramming (dbwebb.se) at BTH the students do programming assignments each week. Together with the exercises they hand in a written review, answering 3-5 questions centered around the topics and assignments of the week. At the end of each study period, a 10 week period, the students hand in an individual project together with an extended review text. The students are graded both with regards to the completed work and the review texts. The following web pages from the program's website explains how the students are graded on their review texts according to the SOLO Taxonomy: \cite{redovisning} and \cite{solo}.
 
-In this report the review texts of three subsequent course projects are analyzed and SOLO graded. The students are given a grade of 1-5 according to the five levels of the SOLO Taxonomy. The SOLO grading will be done manually by reading the review texts and the SOLO grading will be done anonymously, but traceable.
+In this report the review texts of three subsequent course projects are analyzed and SOLO graded. The three courses are ``Databases, HTML, CSS and scriptbased PHP-programming'' (htmlphp), ``Programming with JavaScript, HTML and CSS'' (javascript1) and ``Programming webservices in Linux'' (linux)\footnote{The course names have been translated by the author from Databaser, HTML, CSS och skriptbaserad PHP-programmering, Programmering med JavaScript, HTML och CSS and Programmera webbtjänster i Linux}. The students are given a grade of 1-5 according to the five levels of the SOLO Taxonomy. The SOLO grading will be done manually by reading the review texts and the SOLO grading will be done anonymously, but traceable.
 
 The SOLO grading of the review texts will be done by the author. To ensure an even level of grading the other teachers of the courses are going to do a similar grading and evaluation of a subset of the review texts.
 
-The collection of review texts is done with a web scraper implemented in python. The web scraper fetches the review texts from the students published projects. The review texts are stored in a database together with the website url of the published project and a traceable reference to the student. The review texts are fetched in a manner that removes the names and student acronyms from the review texts to ensure anonymity in most cases.
+The collection of review texts is done with a web scraper implemented in python. The web scraper fetches the review texts from the students published projects. The review texts are stored in a database together with the website URL of the published project and a traceable reference to the student. The review texts are fetched in a manner that removes the names and student acronyms from the review texts to ensure anonymity in most cases.
 
 The analysis of the review texts are done in a web form and the SOLO grade is stored in the same database table as the review texts. The web form removes all styling done by the students and due to the way the collection of review texts are done this further ensures the anonymity of the students.
 
@@ -166,9 +167,11 @@ The web scraper and analysis web form can be found at the author's Github page \
 
 \section{Results}
 
+For this draft 70\% of the review texts have been read and graded.
+
 In table \ref{table:solo} the grade distribution is shown for the three courses: htmlphp, javascript1 and linux.
 
-\begin{table}[ht]
+\begin{table}[H]
 \caption{Solo Grades for the Courses}
 \centering
 \begin{tabular}{c | c c c}
@@ -181,8 +184,11 @@ linux & 6 & 7 & 0 \\ [1ex]
 \label{table:solo}
 \end{table}
 
-In the plots below the SOLO grades are plotted together with the grade for the course.
+Figure \ref{fig:htmlphp} shows the the SOLO grade compared to the grade that the student obtained in the htmlphp-course.
 
+\begin{figure}[H]
+\label{fig:htmlphp}
+\caption{SOLO grade compared to course grade in htmlphp.}
 \begin{tikzpicture}
 \begin{axis}[
     ybar,
@@ -200,11 +206,15 @@ In the plots below the SOLO grades are plotted together with the grade for the c
 \addplot coordinates {(A, 0) (B, 2) (C, 0) (D, 0)};
 \legend{Relational,Multistructural, Unistructural}
 \end{axis}
-\label{plot:htmlphp}
 \end{tikzpicture}
+\end{figure}
 
 
+Figure \ref{fig:javascript1} shows the the SOLO grade compared to the grade that the student obtained in the javascript1-course.
 
+\begin{figure}[H]
+\label{fig:javascript1}
+\caption{SOLO grade compared to course grade in javascript1.}
 \begin{tikzpicture}
 \begin{axis}[
     ybar,
@@ -222,11 +232,14 @@ In the plots below the SOLO grades are plotted together with the grade for the c
 \addplot coordinates {(A, 0) (B, 0) (C, 0) (D, 0)};
 \legend{Relational,Multistructural, Unistructural}
 \end{axis}
-\label{plot:javascript1}
 \end{tikzpicture}
+\end{figure}
 
+Figure \ref{fig:linux} shows the the SOLO grade compared to the grade that the student obtained in the linux-course.
 
-
+\begin{figure}[H]
+\label{fig:linux}
+\caption{SOLO grade compared to course grade in linux.}
 \begin{tikzpicture}
 \begin{axis}[
     ybar,
@@ -244,8 +257,8 @@ In the plots below the SOLO grades are plotted together with the grade for the c
 \addplot coordinates {(A, 0) (B, 0) (C, 0) (D, 0)};
 \legend{Relational,Multistructural, Unistructural}
 \end{axis}
-\label{plot:linux}
 \end{tikzpicture}
+\end{figure}
 
 
 
@@ -262,15 +275,6 @@ Here the analysis and discussion of the results will be shown.
 \section{Conclusion}
 
 Here the conclusions are drawn.
-
-
-
-%------------------------------------------------
-
-\section{Future Work}
-
-
-Here I will discuss my plan to do it with NLP and AI.
 
 
 
