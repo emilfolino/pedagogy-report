@@ -147,6 +147,8 @@ No examples of Extended Abstract texts were found in the review texts. The stude
 
 In our daily teaching at Webbprogramming (dbwebb.se) at BTH the students do programming assignments each week. Together with the exercises they hand in a written review, answering 3-5 questions centered around the topics and assignments of the week. At the end of each study period, a 10 week period, the students hand in an individual project together with an extended review text. The students are graded both with regards to the completed work and the review texts. The following web pages from the program's website explains how the students are graded on their review texts according to the SOLO Taxonomy: \cite{redovisning} and \cite{solo}.
 
+% TODO: More about SOLO and how it is changed for this project.
+
 In this report the review texts of three subsequent course projects are analyzed and SOLO graded. The three courses are ``Databases, HTML, CSS and scriptbased PHP-programming'' (htmlphp), ``Programming with JavaScript, HTML and CSS'' (javascript1) and ``Programming webservices in Linux'' (linux)\footnote{The course names have been translated by the author from Databaser, HTML, CSS och skriptbaserad PHP-programmering, Programmering med JavaScript, HTML och CSS and Programmera webbtjänster i Linux}. The students are given a grade of 1-5 according to the five levels of the SOLO Taxonomy. The SOLO grading will be done manually by reading the review texts and the SOLO grading will be done anonymously, but traceable.
 
 The SOLO grading of the review texts will be done by the author. To ensure an even level of grading the other teachers of the courses are going to do a similar grading and evaluation of a subset of the review texts.
@@ -156,6 +158,8 @@ The collection of review texts is done with a web scraper implemented in python.
 The analysis of the review texts are done in a web form and the SOLO grade is stored in the same database table as the review texts. The web form removes all styling done by the students and due to the way the collection of review texts are done this further ensures the anonymity of the students.
 
 After the review texts have been analyzed and SOLO graded the SOLO grade will be compared to the final grade of the course. The students' final grade will be fetched and stored in another database table together with the same traceable reference to the students. The final grade for the course and the SOLO grade can now be compared and analyzed to evaluate if there is a correlation between the SOLO grade and the final grade in the course.
+
+% TODO: Explain how the grading is done threat to validity.
 
 As the review texts are taken from three subsequent courses the evolution of the students' understanding of the course material and programming in general can be investigated.
 
@@ -177,9 +181,9 @@ In table \ref{table:solo} the grade distribution is shown for the three courses:
 \begin{tabular}{c | c c c}
 Course & Relational & Multi & Uni \\ [0.5ex] % inserts table %heading
 \hline
-htmlphp & 2 & 11 & 2 \\
-javascript1 & 1 & 2 & 1 \\
-linux & 6 & 7 & 0 \\ [1ex]
+htmlphp & 4 & 13 & 5 \\
+javascript1 & 6 & 8 & 2 \\
+linux & 9 & 9 & 0 \\ [1ex]
 \end{tabular}
 \label{table:solo}
 \end{table}
