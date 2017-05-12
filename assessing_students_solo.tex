@@ -66,7 +66,7 @@
 \renewcommand{\maketitlehookd}{%
 \begin{abstract}
 
-\noindent In this paper a method of qualitative assessment of programming student is investigated. The qualitative assessment is done by reading students' review text from individual programming projects and analyzing the content according to the SOLO taxonomy.
+\noindent In this paper a method of qualitative assessment of programming student is investigated. The qualitative assessment is done by reading students' review text from individual programming projects and analyzing the content according to the SOLO taxonomy. A positive progression in the students' comprehension and understanding of the course material and in programming in general is observed.
 
 \end{abstract}
 }
@@ -171,28 +171,26 @@ The web scraper and analysis web form can be found at the author's Github page \
 
 \section{Results}
 
-For this draft 70\% of the review texts have been read and graded.
-
 In table \ref{table:solo} the grade distribution is shown for the three courses: htmlphp, javascript1 and linux.
 
 \begin{table}[H]
 \caption{Solo Grades for the Courses}
 \centering
-\begin{tabular}{c | c c c}
-Course & Relational & Multi & Uni \\ [0.5ex] % inserts table %heading
+\begin{tabular}{c | c c c | c}
+Course & Relational & Multi & Uni & Total  \\ [0.5ex] % inserts table %heading
 \hline
-htmlphp & 4 & 13 & 5 \\
-javascript1 & 6 & 8 & 2 \\
-linux & 9 & 9 & 0 \\ [1ex]
+htmlphp & 4 & 13 & 5 & 22 \\
+javascript1 & 6 & 8 & 2 & 16\\
+linux & 9 & 9 & 0 & 18 \\ [1ex]
 \end{tabular}
 \label{table:solo}
 \end{table}
 
-Figure \ref{fig:htmlphp} shows the the SOLO grade compared to the grade that the student obtained in the htmlphp-course.
+The total number of grades in figures \ref{fightmlphp}, \ref{figjavascript1} and \ref{figlinux} does not correspond with the total number of grades in table \ref{table:solo}. Not all students have been graded because the students have not presented their work.
+
+Figure \ref{fightmlphp} shows the the SOLO grade compared to the grade that the student obtained in the htmlphp-course.
 
 \begin{figure}[H]
-\label{fig:htmlphp}
-\caption{SOLO grade compared to course grade in htmlphp.}
 \begin{tikzpicture}
 \begin{axis}[
     ybar,
@@ -205,20 +203,20 @@ Figure \ref{fig:htmlphp} shows the the SOLO grade compared to the grade that the
     nodes near coords,
     nodes near coords align={vertical},
     ]
-\addplot coordinates {(A, 2) (B, 0) (C, 0) (D, 0)};
+\addplot coordinates {(A, 2) (B, 1) (C, 0) (D, 1)};
 \addplot coordinates {(A, 4) (B, 3) (C, 2) (D, 2)};
-\addplot coordinates {(A, 0) (B, 2) (C, 0) (D, 0)};
+\addplot coordinates {(A, 1) (B, 0) (C, 1) (D, 1)};
 \legend{Relational,Multistructural, Unistructural}
 \end{axis}
 \end{tikzpicture}
+\caption{SOLO grade compared to course grade in htmlphp.}
+\label{fightmlphp}
 \end{figure}
 
 
-Figure \ref{fig:javascript1} shows the the SOLO grade compared to the grade that the student obtained in the javascript1-course.
+Figure \ref{figjavascript1} shows the the SOLO grade compared to the grade that the student obtained in the javascript1-course.
 
 \begin{figure}[H]
-\label{fig:javascript1}
-\caption{SOLO grade compared to course grade in javascript1.}
 \begin{tikzpicture}
 \begin{axis}[
     ybar,
@@ -231,19 +229,19 @@ Figure \ref{fig:javascript1} shows the the SOLO grade compared to the grade that
     nodes near coords,
     nodes near coords align={vertical},
     ]
-\addplot coordinates {(A, 0) (B, 0) (C, 0) (D, 0)};
+\addplot coordinates {(A, 1) (B, 1) (C, 0) (D, 0)};
+\addplot coordinates {(A, 4) (B, 0) (C, 0) (D, 3)};
 \addplot coordinates {(A, 1) (B, 0) (C, 0) (D, 1)};
-\addplot coordinates {(A, 0) (B, 0) (C, 0) (D, 0)};
 \legend{Relational,Multistructural, Unistructural}
 \end{axis}
 \end{tikzpicture}
+\caption{SOLO grade compared to course grade in javascript1.}
+\label{figjavascript1}
 \end{figure}
 
-Figure \ref{fig:linux} shows the the SOLO grade compared to the grade that the student obtained in the linux-course.
+Figure \ref{figlinux} shows the the SOLO grade compared to the grade that the student obtained in the linux-course.
 
 \begin{figure}[H]
-\label{fig:linux}
-\caption{SOLO grade compared to course grade in linux.}
 \begin{tikzpicture}
 \begin{axis}[
     ybar,
@@ -256,12 +254,14 @@ Figure \ref{fig:linux} shows the the SOLO grade compared to the grade that the s
     nodes near coords,
     nodes near coords align={vertical},
     ]
-\addplot coordinates {(A, 4) (B, 0) (C, 0) (D, 0)};
-\addplot coordinates {(A, 4) (B, 2) (C, 0) (D, 0)};
+\addplot coordinates {(A, 4) (B, 0) (C, 1) (D, 1)};
+\addplot coordinates {(A, 4) (B, 3) (C, 0) (D, 1)};
 \addplot coordinates {(A, 0) (B, 0) (C, 0) (D, 0)};
 \legend{Relational,Multistructural, Unistructural}
 \end{axis}
 \end{tikzpicture}
+\caption{SOLO grade compared to course grade in linux.}
+\label{figlinux}
 \end{figure}
 
 
@@ -270,7 +270,7 @@ Figure \ref{fig:linux} shows the the SOLO grade compared to the grade that the s
 
 \section{Discussion}
 
-Here the analysis and discussion of the results will be shown.
+As a teacher you hope to see a positive trend in your students comprehension of the course material. The SOLO taxonomy can be used to evaluate the comprehension and understand that the students have obtained. In table \ref{table:solo} we observe that the number of relational review texts increase as the students progress through the three subsequent courses.
 
 
 
