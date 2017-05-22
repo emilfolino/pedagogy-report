@@ -66,7 +66,7 @@
 \renewcommand{\maketitlehookd}{%
 \begin{abstract}
 
-\noindent In this paper a method of qualitative assessment of programming student is investigated. The qualitative assessment is done by reading students' review texts from individual programming projects and analyzing the content according to the SOLO taxonomy. The students are awarded a SOLO level of \textit{Relational}, \textit{Multistructural}, or \textit{Unistructural} and the SOLO level is compared to the final grade of the courses. A correlation between a students final grade and the SOLO level is shown. Furthermore a positive progression in the students' comprehension and understanding of the course material and in programming in general is observed.
+\noindent In this paper a method of qualitative assessment of programming student is investigated. The qualitative assessment is done by reading students' review texts from individual programming projects and analyzing the content according to the SOLO taxonomy. The students are awarded a SOLO level of \textbf{Relational}, \textbf{Multistructural}, or \textbf{Unistructural} and the SOLO level is compared to the final grade of the courses. A correlation between a students final grade and the SOLO level is shown. Furthermore a positive progression in the students' comprehension and understanding of the course material and in programming in general is observed.
 
 \end{abstract}
 }
@@ -103,7 +103,7 @@ In our daily teaching at Webbprogramming (dbwebb.se) at BTH the students do prog
 
 % TODO: More about SOLO and how it is changed for this project.
 
-In this report the review texts of three subsequent course projects are analyzed and SOLO graded. The three courses are ``Databases, HTML, CSS and scriptbased PHP-programming'' (htmlphp), ``Programming with JavaScript, HTML and CSS'' (javascript1) and ``Programming webservices in Linux'' (linux)\footnote{The course names have been translated by the author from Databaser, HTML, CSS och skriptbaserad PHP-programmering, Programmering med JavaScript, HTML och CSS and Programmera webbtjänster i Linux}. The students are given a grade of 1-5 according to the five levels of the SOLO Taxonomy. The SOLO grading will be done manually by reading the review texts and the SOLO grading will be done anonymously, but traceable.
+In this report the review texts of three subsequent course projects are analyzed and SOLO graded. The three courses are ``Databases, HTML, CSS and scriptbased PHP-programming'' (htmlphp), ``Programming with JavaScript, HTML and CSS'' (javascript1) and ``Programming webservices in Linux'' (linux)\footnote{The course names have been translated by the author from Databaser, HTML, CSS och skriptbaserad PHP-programmering, Programmering med JavaScript, HTML och CSS and Programmera webbtjänster i Linux}. The students are given a grade of 1-5 according to the five levels of the SOLO Taxonomy, \textit{Prestructural}, \textit{Unistructural}, \textit{Multistructural}, \textit{Relational}, \textit{Extended Abstract}. The SOLO grading will be done manually by reading the review texts and the SOLO grading will be done anonymously, but traceable.
 
 The SOLO grading of the review texts will be done by the author. To ensure an even level of grading the other teachers of the courses are going to do a similar grading and evaluation of a subset of the review texts.
 
@@ -127,9 +127,11 @@ The web scraper and analysis web form can be found at the author's Github page \
 
 In this section examples of how the review texts are mapped to each level of the SOLO taxonomy are shown. The review texts have been translated from Swedish to English by the author. The original Swedish texts are found in appendix \ref{app:original}.
 
+The students
+
 \subsection{Prestructural}
 
-No answer more than repeating the question. The student is failed based on the text. The Prestructural SOLO grade are used for students that have not handed in the projects or have failed to write a review text that explains the problem.
+No answer more than repeating the question. The student is failed based on the text. The Prestructural SOLO grade is used for students that have not handed in the projects.
 
 \subsection{Unistructural}
 
@@ -154,9 +156,6 @@ The student give a technical explanation of the implementation and justifies the
 \\
 \\
 \textbf{Examples:} ``I chose to not split my client as it is done in the Gomoku assignment \footnote{A programming assignment earlier in the course}. I know that the reason is to separate general and domain-specific code, but I am not going to extend on this client so I have decided to put all the code in the same file.''
-\\
-\\
-``When i decided on the style for the page i looked at other websites with a connection to funerals.''
 \\
 \\
 ``With earlier assignments' clients as a base I did a client that tests the server.''
@@ -186,9 +185,23 @@ linux & 9 & 9 & 0 & 18 \\ [1ex]
 \label{table:solo}
 \end{table}
 
+\begin{table}[H]
+\caption{Solo Grades for the Courses}
+\centering
+\begin{tabular}{c | c c c}
+Course & Relational & Multi & Uni \\ [0.5ex] % inserts table %heading
+\hline
+htmlphp & 18\% & 59\% & 23\% \\
+javascript1 & 37.5\% & 50\% & 12.5\%\\
+linux & 50\% & 50\% & 0\%\\ [1ex]
+\end{tabular}
+\label{table:solorelative}
+\end{table}
+
+
 The total number of students in figures \ref{fightmlphp}, \ref{figjavascript1} and \ref{figlinux} does not correspond with the number of students for each course in table \ref{table:solo}. Not all students have received a grade in the courses because the students have not completed the mandatory oral presentation of their project.
 
-Figure \ref{fightmlphp} shows the the SOLO grade compared to the grade that the student obtained in the htmlphp-course.
+Figure \ref{fightmlphp} shows the SOLO grade compared to the grade that the student obtained in the htmlphp-course.
 
 \begin{figure}[H]
 \begin{tikzpicture}
@@ -213,7 +226,7 @@ Figure \ref{fightmlphp} shows the the SOLO grade compared to the grade that the 
 \label{fightmlphp}
 \end{figure}
 
-Figure \ref{figjavascript1} shows the the SOLO grade compared to the grade that the student obtained in the javascript1-course.
+Figure \ref{figjavascript1} shows the SOLO grade compared to the grade that the student obtained in the javascript1-course.
 
 \begin{figure}[H]
 \begin{tikzpicture}
@@ -238,7 +251,7 @@ Figure \ref{figjavascript1} shows the the SOLO grade compared to the grade that 
 \label{figjavascript1}
 \end{figure}
 
-Figure \ref{figlinux} shows the the SOLO grade compared to the grade that the student obtained in the linux-course.
+Figure \ref{figlinux} shows the SOLO grade compared to the grade that the student obtained in the linux-course.
 
 \begin{figure}[H]
 \begin{tikzpicture}
@@ -300,9 +313,9 @@ D & 20\% & 60\% & 20\% \\ [1ex]
 \section{Discussion}
 
 In table \ref{table:sum} and \ref{table:percentage}
-we observe that students receiving a final grade of A in the courses are more likely to hand in a relational review text than especially students with a final grade of B or D. Few students received a final grade of C and therefore the grades are skewed towards a higher number of relational review texts. What can be observed is that the students with a final grade of A to a lesser degree than any other final grade answers with a unistructural review text.
+we observe that students receiving a final grade of A in the courses are more likely to hand in a relational review text than especially students with a final grade of B or D. Few students received a final grade of C and therefore the grades are skewed towards a higher number of relational review texts. What can be observed is that the students with a final grade of A to a lesser degree than any other final grade answers with a Unistructural review text.
 
-As a teacher you hope to see a positive trend in your students comprehension of the course material. The SOLO taxonomy can be used to evaluate the comprehension and understand that the students have obtained. In table \ref{table:solo} we observe that the number of relational review texts increase as the students progress through the three subsequent courses. At the end of the linux course in study period 3 the students have
+As a teacher you hope to see a positive trend in your students comprehension of the course material. The SOLO taxonomy can be used to evaluate the comprehension and understand that the students have obtained. In table \ref{table:solo} and \ref{table:solorelative} we observe that the number of relational review texts increase as the students progress through the three subsequent courses. At the end of the linux course in study period 3 the students have studied 45 ECTS-credits programming courses and have moved from novices to more advanced programmers.
 
 
 
@@ -310,7 +323,7 @@ As a teacher you hope to see a positive trend in your students comprehension of 
 
 \section{Conclusion}
 
-In \cite{lister2006not} the authors Lister et al. conclude that as a complement to programming exercises the student should be assessed on written or think-aloud responses to programming assignments. The study described in this paper confirms that a written assignments together with the programming assignments is a valid assessment method and that the final grade in the courses correlate with the level of understanding.
+In \cite{lister2006not} the authors Lister et al. conclude that as a complement to programming exercises the student should be assessed on written or think-aloud responses to programming assignments. The study described in this paper confirms that a written assignments together with the programming assignments is a valid assessment method and that the final grade in the courses correlate with the level of understanding. Furthermore it is observed that
 
 
 
