@@ -66,7 +66,7 @@
 \renewcommand{\maketitlehookd}{%
 \begin{abstract}
 
-\noindent In this paper a method of qualitative assessment of programming student is investigated. The qualitative assessment is done by reading students' review text from individual programming projects and analyzing the content according to the SOLO taxonomy. A positive progression in the students' comprehension and understanding of the course material and in programming in general is observed.
+\noindent In this paper a method of qualitative assessment of programming student is investigated. The qualitative assessment is done by reading students' review texts from individual programming projects and analyzing the content according to the SOLO taxonomy. The students are awarded a SOLO level of \textit{Relational}, \textit{Multistructural}, or \textit{Unistructural} and the SOLO level is compared to the final grade of the courses. A correlation between a students final grade and the SOLO level is shown. Furthermore a positive progression in the students' comprehension and understanding of the course material and in programming in general is observed.
 
 \end{abstract}
 }
@@ -83,13 +83,41 @@
 %----------------------------------------------------------------------------------------
 
 \section{Introduction}
-Quantitatively assessing students in programming and computer science courses is often easy to do. Have the student completed the assigned tasks? Does the application work as it is supposed to do? Does any software tests fail? However assessing the comprehension and understanding of the completed assignments and doing a qualitative evaluation of the student is harder \cite{biggs1982evaluation}. The SOLO Taxonomy was proposed by Biggs and Collis in 1982 and is abbreviated from Structure of the Observed Learning Outcome. The taxonomy is used to qualitatively assess students' work. The SOLO taxonomy consists of five levels of understanding: Prestructural, Unistructural, Multistructural, Relational, and Extended Abstract. In section \ref{sec:examples} the five levels of understanding will be exemplified by the students' review texts.
+Quantitatively assessing students in programming and computer science courses is often easy to do. Have the student completed the assigned tasks? Does the application work as it is supposed to do? Does any software tests fail? These questions are easily answered by automated procedures or a simple yes or no. However assessing the students' comprehension and understanding of the completed assignments and carry out a qualitative evaluation is harder \cite{biggs1982evaluation}. The SOLO taxonomy was proposed by Biggs and Collis in 1982 and is abbreviated from Structure of the Observed Learning Outcome. The taxonomy is used to qualitatively assess students' work. The SOLO taxonomy consists of five levels of understanding: Prestructural, Unistructural, Multistructural, Relational, and Extended Abstract. In section \ref{sec:examples} the five levels of understanding will be exemplified by the students' review texts.
 
-In \cite{mccracken2001multi} McCracken et al. evaluated and first year Computer Science students' programming competency. A framework outlining the expectations of first year Computer Science  students are proposed. However the assessment is only done in a quantitative way and there are no recommendations for any qualitative assessment method.
+In \cite{mccracken2001multi} McCracken et al. evaluated first year Computer Science students' programming competency. Several Universities took part in the study that showed disappointing results. To reverse the disappointing results a framework outlining the expectations of first year Computer Science students are proposed. However, the assessment is carried out in a quantitative way and there are no recommendations for any qualitative assessment methods.
 
-Paulo Blikstein \cite{Blikstein} uses snapshots of students' code during a programming assignment together with data mining to automate a technique to assess and analyze students learning programming. It is concluded that together with other data sources (Blikstein propose interviews, tests and surveys) the automated assessment can give insights into the understanding of the learing of programming.
+Paulo Blikstein \cite{Blikstein} uses snapshots of students' code during a programming assignment together with data mining to automate a technique to assess and analyze students learning programming. It is concluded that together with other data sources (Blikstein propose interviews, tests and surveys) the automated assessment can give insights into the understanding of the learning of programming. The assessment of the students' code is done entirely with quantitative methods.
 
-In \cite{lister2006not} Lister et al. looks at written and think-aloud responses to exam questions. Lister et al. conclude that experienced programmers more frequently answered with SOLO relational responses compared to the novice programmers multi-structural responses. Lister et al. recommend that the students are given written assignments together with programming assignments making it easier to evaluate the understanding and comprehension the students obtain in programming courses.
+In \cite{lister2006not} Lister et al. study written and think-aloud responses to exam questions. Lister et al. conclude that experienced programmers more frequently answered with SOLO relational responses compared to the novice programmers multi-structural responses. Lister et al. recommend that the students are given written assignments together with programming assignments making it easier to evaluate the understanding and comprehension the students obtain in programming courses.
+
+The study in this paper builds upon the results outlined in \cite{lister2006not} by analyzing review texts written by first year programming students. The review texts are handed in as a complement to the source code of programming projects. The review texts together with the project forms the basis for the final grade given in the course.
+
+
+
+%------------------------------------------------
+
+\section{Method}
+
+In our daily teaching at Webbprogramming (dbwebb.se) at BTH the students do programming assignments each week. Together with the exercises they hand in a written review, answering 3-5 questions centered around the topics and assignments of the week. At the end of each study period, a 10 week period, the students hand in an individual project together with an extended review text. The students are graded both with regards to the completed work and the review texts. The following web pages from the program's website explains how the students are graded on their review texts according to the SOLO Taxonomy: \cite{redovisning} and \cite{solo}.
+
+% TODO: More about SOLO and how it is changed for this project.
+
+In this report the review texts of three subsequent course projects are analyzed and SOLO graded. The three courses are ``Databases, HTML, CSS and scriptbased PHP-programming'' (htmlphp), ``Programming with JavaScript, HTML and CSS'' (javascript1) and ``Programming webservices in Linux'' (linux)\footnote{The course names have been translated by the author from Databaser, HTML, CSS och skriptbaserad PHP-programmering, Programmering med JavaScript, HTML och CSS and Programmera webbtjänster i Linux}. The students are given a grade of 1-5 according to the five levels of the SOLO Taxonomy. The SOLO grading will be done manually by reading the review texts and the SOLO grading will be done anonymously, but traceable.
+
+The SOLO grading of the review texts will be done by the author. To ensure an even level of grading the other teachers of the courses are going to do a similar grading and evaluation of a subset of the review texts.
+
+The collection of review texts is done with a web scraper implemented in python. The web scraper fetches the review texts from the students published projects. The review texts are stored in a database together with the website URL of the published project and a traceable reference to the student. The review texts are fetched in a manner that removes the names and student acronyms from the review texts to ensure anonymity in most cases.
+
+The analysis of the review texts are done in a web form and the SOLO grade is stored in the same database table as the review texts. The web form removes all styling done by the students and due to the way the collection of review texts are done this further ensures the anonymity of the students. The anonymity of the
+
+After the review texts have been analyzed and SOLO graded the SOLO grade will be compared to the final grade of the course. The students' final grade will be fetched and stored in another database table together with the same traceable reference to the students. The final grade for the course and the SOLO grade can now be compared and analyzed to evaluate if there is a correlation between the SOLO grade and the final grade in the course.
+
+The courses are graded based on the following criteria with a maximum of 100 points in total. 30 points for the completion of the six weekly assignments, 10 points for weekly extra assignments and extraordinary weekly review texts. 10 points for each mandatory requirement and 10 points for each optional requirement of the project. The students are awarded credits on the ECTS-credit scale where more than 90 points equals an A, more than 80 equals B etc.
+
+As the review texts are taken from three subsequent courses the evolution of the students' understanding of the course material and programming in general can be investigated.
+
+The web scraper and analysis web form can be found at the author's Github page \footnote{https://github.com/emilfolino/pedagogy}.
 
 
 
@@ -112,7 +140,7 @@ The answer contains no technical description of how the solutions have been impl
 
 \subsection{Multistructural}
 
-The student give a technical explanation of the implementation, more or less line by line and does not relate the implementation to other parts of the code or prior exercises in the courses.
+The student gives a technical explanation of the implementation, more or less line by line and does not relate the implementation to other parts of the code or prior exercises in the courses.
 \\
 \\
 \textbf{Examples:} ``For every iteration in the loop an object is appended to slar.json. So when the loop is done it was just adding the last parenthesis and clean the file so it is valid JSON. I thought this requirement was kind of complicated and my solution is absolutely not the fastest but it does what it is supposed to do and that should suffice.''
@@ -133,37 +161,9 @@ The student give a technical explanation of the implementation and justifies the
 \\
 ``With earlier assignments' clients as a base I did a client that tests the server.''
 
-
-
 \subsection{Extended Abstract}
 
 No examples of Extended Abstract texts were found in the review texts. The students are first-year students and are not asked to produce novel material.
-
-
-
-%------------------------------------------------
-
-\section{Method}
-
-In our daily teaching at Webbprogramming (dbwebb.se) at BTH the students do programming assignments each week. Together with the exercises they hand in a written review, answering 3-5 questions centered around the topics and assignments of the week. At the end of each study period, a 10 week period, the students hand in an individual project together with an extended review text. The students are graded both with regards to the completed work and the review texts. The following web pages from the program's website explains how the students are graded on their review texts according to the SOLO Taxonomy: \cite{redovisning} and \cite{solo}.
-
-% TODO: More about SOLO and how it is changed for this project.
-
-In this report the review texts of three subsequent course projects are analyzed and SOLO graded. The three courses are ``Databases, HTML, CSS and scriptbased PHP-programming'' (htmlphp), ``Programming with JavaScript, HTML and CSS'' (javascript1) and ``Programming webservices in Linux'' (linux)\footnote{The course names have been translated by the author from Databaser, HTML, CSS och skriptbaserad PHP-programmering, Programmering med JavaScript, HTML och CSS and Programmera webbtjänster i Linux}. The students are given a grade of 1-5 according to the five levels of the SOLO Taxonomy. The SOLO grading will be done manually by reading the review texts and the SOLO grading will be done anonymously, but traceable.
-
-The SOLO grading of the review texts will be done by the author. To ensure an even level of grading the other teachers of the courses are going to do a similar grading and evaluation of a subset of the review texts.
-
-The collection of review texts is done with a web scraper implemented in python. The web scraper fetches the review texts from the students published projects. The review texts are stored in a database together with the website URL of the published project and a traceable reference to the student. The review texts are fetched in a manner that removes the names and student acronyms from the review texts to ensure anonymity in most cases.
-
-The analysis of the review texts are done in a web form and the SOLO grade is stored in the same database table as the review texts. The web form removes all styling done by the students and due to the way the collection of review texts are done this further ensures the anonymity of the students.
-
-After the review texts have been analyzed and SOLO graded the SOLO grade will be compared to the final grade of the course. The students' final grade will be fetched and stored in another database table together with the same traceable reference to the students. The final grade for the course and the SOLO grade can now be compared and analyzed to evaluate if there is a correlation between the SOLO grade and the final grade in the course.
-
-% TODO: Explain how the grading is done threat to validity.
-
-As the review texts are taken from three subsequent courses the evolution of the students' understanding of the course material and programming in general can be investigated.
-
-The web scraper and analysis web form can be found at the author's Github page \footnote{https://github.com/emilfolino/pedagogy}.
 
 
 
@@ -186,7 +186,7 @@ linux & 9 & 9 & 0 & 18 \\ [1ex]
 \label{table:solo}
 \end{table}
 
-The total number of grades in figures \ref{fightmlphp}, \ref{figjavascript1} and \ref{figlinux} does not correspond with the total number of grades in table \ref{table:solo}. Not all students have been graded because the students have not presented their work.
+The total number of students in figures \ref{fightmlphp}, \ref{figjavascript1} and \ref{figlinux} does not correspond with the number of students for each course in table \ref{table:solo}. Not all students have received a grade in the courses because the students have not completed the mandatory oral presentation of their project.
 
 Figure \ref{fightmlphp} shows the the SOLO grade compared to the grade that the student obtained in the htmlphp-course.
 
@@ -204,15 +204,14 @@ Figure \ref{fightmlphp} shows the the SOLO grade compared to the grade that the 
     nodes near coords align={vertical},
     ]
 \addplot coordinates {(A, 2) (B, 1) (C, 0) (D, 1)};
-\addplot coordinates {(A, 4) (B, 3) (C, 2) (D, 2)};
-\addplot coordinates {(A, 1) (B, 0) (C, 1) (D, 1)};
-\legend{Relational,Multistructural, Unistructural}
+\addplot coordinates {(A, 4) (B, 4) (C, 2) (D, 2)};
+\addplot coordinates {(A, 1) (B, 1) (C, 1) (D, 1)};
+\legend{Relational,Multistructural,Unistructural}
 \end{axis}
 \end{tikzpicture}
 \caption{SOLO grade compared to course grade in htmlphp.}
 \label{fightmlphp}
 \end{figure}
-
 
 Figure \ref{figjavascript1} shows the the SOLO grade compared to the grade that the student obtained in the javascript1-course.
 
@@ -229,9 +228,9 @@ Figure \ref{figjavascript1} shows the the SOLO grade compared to the grade that 
     nodes near coords,
     nodes near coords align={vertical},
     ]
-\addplot coordinates {(A, 1) (B, 1) (C, 0) (D, 0)};
+\addplot coordinates {(A, 2) (B, 1) (C, 0) (D, 0)};
 \addplot coordinates {(A, 4) (B, 0) (C, 0) (D, 3)};
-\addplot coordinates {(A, 1) (B, 0) (C, 0) (D, 1)};
+\addplot coordinates {(A, 0) (B, 0) (C, 0) (D, 1)};
 \legend{Relational,Multistructural, Unistructural}
 \end{axis}
 \end{tikzpicture}
@@ -254,8 +253,8 @@ Figure \ref{figlinux} shows the the SOLO grade compared to the grade that the st
     nodes near coords,
     nodes near coords align={vertical},
     ]
-\addplot coordinates {(A, 4) (B, 0) (C, 1) (D, 1)};
-\addplot coordinates {(A, 4) (B, 3) (C, 0) (D, 1)};
+\addplot coordinates {(A, 4) (B, 0) (C, 2) (D, 1)};
+\addplot coordinates {(A, 4) (B, 3) (C, 1) (D, 1)};
 \addplot coordinates {(A, 0) (B, 0) (C, 0) (D, 0)};
 \legend{Relational,Multistructural, Unistructural}
 \end{axis}
@@ -264,13 +263,46 @@ Figure \ref{figlinux} shows the the SOLO grade compared to the grade that the st
 \label{figlinux}
 \end{figure}
 
+The comparison of SOLO grades and course grades are summarized in table \ref{table:sum}.
+
+\begin{table}[H]
+\caption{Comparison of SOLO grades and course grades.}
+\centering
+\begin{tabular}{c | c c c c}
+Grade & Relational & Multi & Uni \\ [0.5ex] % inserts table %heading
+\hline
+A & 8 & 12 & 1 \\
+B & 2 & 7 & 1 \\
+C & 2 & 3 & 1 \\
+D & 2 & 6 & 2 \\ [1ex]
+\end{tabular}
+\label{table:sum}
+\end{table}
+
+\begin{table}[H]
+\caption{Comparison of SOLO grades and course grades shown relative to the number of students receiving the grade.}
+\centering
+\begin{tabular}{c | c c c c}
+Grade & Relational & Multi & Uni \\ [0.5ex] % inserts table %heading
+\hline
+A & 38\% & 57\% & 5\% \\
+B & 20\% & 70\% & 10\% \\
+C & 33\% & 50\% & 17\% \\
+D & 20\% & 60\% & 20\% \\ [1ex]
+\end{tabular}
+\label{table:percentage}
+\end{table}
+
 
 
 %------------------------------------------------
 
 \section{Discussion}
 
-As a teacher you hope to see a positive trend in your students comprehension of the course material. The SOLO taxonomy can be used to evaluate the comprehension and understand that the students have obtained. In table \ref{table:solo} we observe that the number of relational review texts increase as the students progress through the three subsequent courses.
+In table \ref{table:sum} and \ref{table:percentage}
+we observe that students receiving a final grade of A in the courses are more likely to hand in a relational review text than especially students with a final grade of B or D. Few students received a final grade of C and therefore the grades are skewed towards a higher number of relational review texts. What can be observed is that the students with a final grade of A to a lesser degree than any other final grade answers with a unistructural review text.
+
+As a teacher you hope to see a positive trend in your students comprehension of the course material. The SOLO taxonomy can be used to evaluate the comprehension and understand that the students have obtained. In table \ref{table:solo} we observe that the number of relational review texts increase as the students progress through the three subsequent courses. At the end of the linux course in study period 3 the students have
 
 
 
@@ -278,7 +310,7 @@ As a teacher you hope to see a positive trend in your students comprehension of 
 
 \section{Conclusion}
 
-Here the conclusions are drawn.
+In \cite{lister2006not} the authors Lister et al. conclude that as a complement to programming exercises the student should be assessed on written or think-aloud responses to programming assignments. The study described in this paper confirms that a written assignments together with the programming assignments is a valid assessment method and that the final grade in the courses correlate with the level of understanding.
 
 
 
@@ -286,7 +318,7 @@ Here the conclusions are drawn.
 
 \section{Acknowledgements}
 
-Thanks to Mikael Roos, Kenneth Lewenhagen, and Andreas Arnesson of Webbprogrammering at BTH for helping to ensure even SOLO grading by reading and evaluating a subset of the analyzed review texts.
+Thanks to Mikael Roos, Kenneth Lewenhagen, and Andreas Arnesson of Webbprogrammering at BTH for helping to ensure even SOLO grading by reading and analyzing a subset of the review texts.
 
 
 
@@ -298,6 +330,7 @@ Thanks to Mikael Roos, Kenneth Lewenhagen, and Andreas Arnesson of Webbprogramme
 \bibliography{references}
 
 %----------------------------------------------------------------------------------------
+\newpage
 
 \appendix
 
