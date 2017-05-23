@@ -84,7 +84,7 @@ Paulo Blikstein \cite{Blikstein} uses snapshots of students' code during a progr
 
 In \cite{lister2006not} Lister et al. study written and think-aloud responses to exam questions. The authors analyzes the responses according to the SOLO taxonomy and conclude that experienced programmers more frequently answered with SOLO relational responses compared to the novice programmers multi-structural responses. Lister et al. recommend that the students are given written assignments together with programming assignments making it easier to evaluate the understanding and comprehension the students obtain in programming courses.
 
-The study in this paper builds upon the results outlined in \cite{lister2006not} by analyzing review texts written by first year programming students. The review texts are handed in as a complement to the source code of programming projects. The review texts together with weekly assignments and the project forms the basis for the final grade given in the course.
+The study in this paper builds upon the results outlined in \cite{lister2006not} by analyzing review texts written by first-year programming students. The review texts are handed in as a complement to the source code of programming projects. The review texts together with weekly assignments and the project forms the basis for the final grade given in the course.
 
 
 
@@ -190,6 +190,52 @@ linux & 50\% & 50\% & 0\%\\ [1ex]
 \end{tabular}
 \label{table:solorelative}
 \end{table}
+
+
+Figure \ref{figcomparison} shows the relationship between SOLO level and the three subsequent courses.
+
+\begin{figure}
+\begin{tikzpicture}
+\begin{axis}[
+    title={SOLO level compared to courses},
+    xlabel={Courses},
+    ylabel={SOLO level},
+    xmin=1, xmax=3,
+    ymin=0, ymax=5,
+    xtick={1,2,3},
+    ytick={0,1,2,3,4,5},
+    legend style={at={(0.5,-0.25)},
+      anchor=north,legend columns=3},
+    ymajorgrids=true,
+    grid style=dashed,
+]
+
+\addplot coordinates {(1,3)(2,3)(3,4)};
+\addplot coordinates {(1,3)(2,3)(3,4)};
+\addplot coordinates {(1,3)(2,3)(3,4)};
+\addplot coordinates {(1,3)(2,4)(3,4)};
+\addplot coordinates {(1,3)(2,4)(3,4)};
+\addplot coordinates {(1,2)(2,3)(3,3)};
+\addplot coordinates {(2,3)(3,4)};
+\addplot coordinates {(1,4)(3,4)};
+\addplot coordinates {(1,4)(3,3)};
+\addplot coordinates {(1,3)(2,2)(3,4)};
+\addplot coordinates {(1,2)(2,4)(3,3)};
+\addplot coordinates {(1,3)(3,3)};
+\addplot coordinates {(1,2)(2,3)(3,3)};
+\addplot coordinates {(1,4)(2,3)(3,4)};
+\addplot coordinates {(1,3)(2,3)(3,3)};
+\addplot coordinates {(1,2)(2,4)};
+\legend{28387421,2e28c990,3fdbd61e,5c75c9f1,5dcabbe7,68cc03f0,7143f813,7b8fb884,857d5208,95dcad6b,c68f38bd,d112ecf7,d5ccca2a,e18da383,ebbf7c6b,ebf3313e,f247d83f}
+
+\end{axis}
+\end{tikzpicture}
+\caption{SOLO grades over time.}
+\label{figcomparison}
+\end{figure}
+
+
+
 
 The total number of students in figures \ref{fightmlphp}, \ref{figjavascript1} and \ref{figlinux} does not correspond with the number of students for each course in table \ref{table:solo}. Not all students have received a grade in the courses because the students have not completed the mandatory oral presentation of their project.
 
@@ -304,7 +350,7 @@ D & 20\% & 60\% & 20\% \\ [1ex]
 
 \section{Discussion}
 
-In table \ref{table:sum} and \ref{table:percentage} we observe that students receiving a final grade of A in the courses are more likely to hand in a relational review texts than especially students with a final grade of B or D. Relatively few students received a final grade of C and therefore the grades are skewed towards a higher number of relational review texts. What can be observed is that the students with a final grade of A to a lesser degree than any other final grade answers with a Unistructural review text. 
+In table \ref{table:sum} and \ref{table:percentage} we observe that students receiving a final grade of A in the courses are more likely to hand in a relational review texts than especially students with a final grade of B or D. Relatively few students received a final grade of C and therefore the grades are skewed towards a higher number of relational review texts. What can be observed is that the students with a final grade of A to a lesser degree than any other final grade answers with a Unistructural review text.
 
 As a teacher you hope to see a positive trend in your students comprehension of the course material. The SOLO taxonomy can be used to evaluate the comprehension and understand that the students have obtained. In tables \ref{table:solo} and \ref{table:solorelative} it is observed that the number of relational review texts increase as the students progress through the three subsequent courses. At the end of the linux course in study period 3 the students have studied 45 ECTS-credits programming courses and have moved from novices to more advanced programmers. According to Lister et al. in \cite{lister2006not} it is expected that advanced programmers answer with relational answers and the results of this study confirms that is the case. In tables \ref{table:solo} and \ref{table:solorelative} the relative number of students answering with multistructural responses is constant and it is the unistructural responses that decreases as the relational responses increase. This further strengthens the observation that the students have a higher comprehension and understanding of the course material and programming in general.
 
