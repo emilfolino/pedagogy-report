@@ -59,7 +59,7 @@
 \renewcommand{\maketitlehookd}{%
 \begin{abstract}
 
-\noindent In this paper a method of qualitative assessment of programming student is investigated. The qualitative assessment is done by reading students' review texts from individual programming projects and analyzing the content according to the SOLO taxonomy. The students are awarded a SOLO level of \textbf{Relational}, \textbf{Multistructural}, or \textbf{Unistructural}. The SOLO level is compared to the final grade of the courses and a correlation between a students final grade and the SOLO level is shown. Furthermore a positive progression in the students' comprehension and understanding of the course material and in programming in general is observed.
+\noindent In this paper a method of qualitative assessment of programming students is investigated. The qualitative assessment is done by reading students' review texts from individual programming projects and analyzing the content according to the SOLO taxonomy. The students are awarded a SOLO level of \textbf{Unistructural}, \textbf{Multistructural}, or \textbf{Relational}. The SOLO level is compared to the final grade of the courses and a correlation between a student's final grade and the SOLO level is shown. Furthermore a positive progression in the students' comprehension and understanding of the course material is observed through the three subsequent courses. A recommendation is given to complement programming exercises with written work where the students get an opportunity to reflect and expand on the completed exercises.
 
 \end{abstract}
 }
@@ -173,7 +173,7 @@ Course & Relational & Multi & Uni & Total  \\ [0.5ex] % inserts table %heading
 \hline
 htmlphp & 4 & 13 & 5 & 22 \\
 javascript1 & 6 & 8 & 2 & 16\\
-linux & 9 & 9 & 0 & 18 \\ [1ex]
+linux & 9 & 9 & 0 & 18 \\
 \end{tabular}
 \label{table:solo}
 \end{table}
@@ -190,52 +190,6 @@ linux & 50\% & 50\% & 0\%\\ [1ex]
 \end{tabular}
 \label{table:solorelative}
 \end{table}
-
-
-Figure \ref{figcomparison} shows the relationship between SOLO level and the three subsequent courses.
-
-\begin{figure}
-\begin{tikzpicture}
-\begin{axis}[
-    title={SOLO level compared to courses},
-    xlabel={Courses},
-    ylabel={SOLO level},
-    xmin=1, xmax=3,
-    ymin=0, ymax=5,
-    xtick={1,2,3},
-    ytick={0,1,2,3,4,5},
-    legend style={at={(0.5,-0.25)},
-      anchor=north,legend columns=3},
-    ymajorgrids=true,
-    grid style=dashed,
-]
-
-\addplot coordinates {(1,3)(2,3)(3,4)};
-\addplot coordinates {(1,3)(2,3)(3,4)};
-\addplot coordinates {(1,3)(2,3)(3,4)};
-\addplot coordinates {(1,3)(2,4)(3,4)};
-\addplot coordinates {(1,3)(2,4)(3,4)};
-\addplot coordinates {(1,2)(2,3)(3,3)};
-\addplot coordinates {(2,3)(3,4)};
-\addplot coordinates {(1,4)(3,4)};
-\addplot coordinates {(1,4)(3,3)};
-\addplot coordinates {(1,3)(2,2)(3,4)};
-\addplot coordinates {(1,2)(2,4)(3,3)};
-\addplot coordinates {(1,3)(3,3)};
-\addplot coordinates {(1,2)(2,3)(3,3)};
-\addplot coordinates {(1,4)(2,3)(3,4)};
-\addplot coordinates {(1,3)(2,3)(3,3)};
-\addplot coordinates {(1,2)(2,4)};
-\legend{28387421,2e28c990,3fdbd61e,5c75c9f1,5dcabbe7,68cc03f0,7143f813,7b8fb884,857d5208,95dcad6b,c68f38bd,d112ecf7,d5ccca2a,e18da383,ebbf7c6b,ebf3313e,f247d83f}
-
-\end{axis}
-\end{tikzpicture}
-\caption{SOLO grades over time.}
-\label{figcomparison}
-\end{figure}
-
-
-
 
 The total number of students in figures \ref{fightmlphp}, \ref{figjavascript1} and \ref{figlinux} does not correspond with the number of students for each course in table \ref{table:solo}. Not all students have received a grade in the courses because the students have not completed the mandatory oral presentation of their project.
 
@@ -350,9 +304,11 @@ D & 20\% & 60\% & 20\% \\ [1ex]
 
 \section{Discussion}
 
-In table \ref{table:sum} and \ref{table:percentage} we observe that students receiving a final grade of A in the courses are more likely to hand in a relational review texts than especially students with a final grade of B or D. Relatively few students received a final grade of C and therefore the grades are skewed towards a higher number of relational review texts. What can be observed is that the students with a final grade of A to a lesser degree than any other final grade answers with a Unistructural review text.
+In table \ref{table:sum} and \ref{table:percentage} we observe that students receiving a final grade of A in the courses are more likely to hand in a relational review texts than especially students with a final grade of B or D. Relatively few students received a final grade of C and therefore the grades are skewed towards a higher number of relational review texts. What can be observed is that the students with a final grade of A to a lesser degree than any other final grade answers with a unistructural review text.
 
 As a teacher you hope to see a positive trend in your students comprehension of the course material. The SOLO taxonomy can be used to evaluate the comprehension and understand that the students have obtained. In tables \ref{table:solo} and \ref{table:solorelative} it is observed that the number of relational review texts increase as the students progress through the three subsequent courses. At the end of the linux course in study period 3 the students have studied 45 ECTS-credits programming courses and have moved from novices to more advanced programmers. According to Lister et al. in \cite{lister2006not} it is expected that advanced programmers answer with relational answers and the results of this study confirms that is the case. In tables \ref{table:solo} and \ref{table:solorelative} the relative number of students answering with multistructural responses is constant and it is the unistructural responses that decreases as the relational responses increase. This further strengthens the observation that the students have a higher comprehension and understanding of the course material and programming in general.
+
+During the study three of the author's colleagues read a subset of 20\% of the texts and did their own analysis and SOLO grading. The SOLO level for three of the 12 analysis differed by one level. In all three cases the author had graded the students higher than the colleagues. The colleagues highlighted that the analysis were difficult as the written texts are long form and parts of the texts would be a multistructural response and other parts is relational responses. The author had the same experience during the grading of all the texts. Shorter and more concise answers to specific problems would yield more easily analyzed material.
 
 
 
@@ -360,7 +316,11 @@ As a teacher you hope to see a positive trend in your students comprehension of 
 
 \section{Conclusion}
 
-In \cite{lister2006not} the authors Lister et al. conclude that as a complement to programming exercises the student should be assessed on written or think-aloud responses to programming assignments. The study described in this paper confirms that a written assignments together with the programming assignments is a valid assessment method and that the final grade in the courses correlate with the level of understanding. Furthermore it is observed that the general level of comprehension and understanding of programming increases during the three subsequent courses that were analyzed in this paper.
+In \cite{lister2006not} the authors Lister et al. conclude that as a complement to programming exercises the student should be assessed on written or think-aloud responses to programming assignments. The study described in this paper confirms that a written assignments together with the programming assignments is a valid assessment method and that the final grade in the courses correlate with the level of understanding. A recommendation is to complement programming exercises with written work where the students get an opportunity to reflect and expand on the completed exercises.
+
+Furthermore it is observed that the general level of comprehension and understanding of programming increases during the three subsequent courses that were analyzed in this paper.
+
+The analyzed material was long form texts and therefore not ideal for this type of SOLO analysis. Written answers to more specific problems would yield better material for the analysis.
 
 
 
@@ -368,7 +328,7 @@ In \cite{lister2006not} the authors Lister et al. conclude that as a complement 
 
 \section{Acknowledgements}
 
-Thanks to Mikael Roos, Kenneth Lewenhagen, and Andreas Arnesson of Webbprogrammering at BTH for helping to ensure even SOLO grading by reading and analyzing a subset of the review texts.
+Thanks to Andreas Arnesson, Kenneth Lewenhagen, and Mikael Roos at Blekinge Tekniska Högskola for helping to ensure even SOLO grading by reading and analyzing a subset of the review texts.
 
 
 
