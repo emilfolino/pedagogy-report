@@ -12,7 +12,7 @@
 
 \usepackage[english]{babel} % Language hyphenation and typographical rules
 
-\usepackage[hmarginratio=1:1,left=18mm,right=18mm,top=20mm,columnsep=20pt]{geometry} % Document margins
+\usepackage[hmarginratio=1:1,left=18mm,right=18mm,top=28mm,bottom=24mm,columnsep=20pt]{geometry} % Document margins
 \usepackage[hang, small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under/above floats in tables or figures
 \usepackage{booktabs} % Horizontal rules in tables
 
@@ -57,7 +57,7 @@
 \renewcommand{\maketitlehookd}{%
 \begin{abstract}
 
-\noindent In this paper a method of qualitative assessment of programming students is investigated. The qualitative assessment is done by reading students' review texts from three subsequent courses' individual programming project. The review texts are analyzed according to the SOLO Taxonomy and the students are awarded a SOLO level of \textbf{Unistructural}, \textbf{Multistructural} or \textbf{Relational}. The SOLO level is compared to the final grade of the three courses and a correlation between a student's final grade and the SOLO level is shown. Furthermore a positive progression in the students' comprehension and understanding of the course material is observed through the three subsequent courses. A recommendation is given to complement programming exercises with written assignments where the students get an opportunity to reflect and expand on the completed exercises.
+\noindent In this paper a method of qualitative assessment of programming students' knowledge and comprehension is investigated. The qualitative assessment is done by reading students' review texts from three subsequent courses' individual programming project. The review texts are analyzed according to the SOLO Taxonomy and the students are awarded a SOLO level of \textbf{Unistructural}, \textbf{Multistructural} or \textbf{Relational}. The SOLO level is compared to the final grade of the three courses and a relation between a student's final grade and the SOLO level is shown. Furthermore a positive progression in the students' comprehension and understanding of the course material is observed through the three subsequent courses. A recommendation is given to complement programming exercises with written assignments where the students get an opportunity to reflect and expand on the completed exercises.
 
 \end{abstract}
 }
@@ -74,7 +74,7 @@
 %----------------------------------------------------------------------------------------
 
 \section{Introduction}
-Quantitatively assessing students in programming and computer science courses is often easy to do. Have the students completed the assigned tasks? Does the application work as it is supposed to do? Does any software tests fail? These questions are easily answered by automated procedures or a simple yes or no. However assessing the students' comprehension and understanding of the completed assignments and carry out a qualitative evaluation is harder \cite{biggs1982evaluation}. The SOLO Taxonomy was proposed by Biggs and Collis in 1982. SOLO is abbreviated from Structure of the Observed Learning Outcome and the SOLO Taxonomy is used to qualitatively assess students' assignments. The SOLO Taxonomy consists of five levels of understanding: \textit{Prestructural}, \textit{Unistructural}, \textit{Multistructural}, \textit{Relational}, and \textit{Extended Abstract}. In section \ref{sec:examples} the five levels of understanding are exemplified by the students' review texts.
+Quantitatively assessing students in programming and computer science courses is often easy to do. Have the students completed the assigned tasks? Does the application work as it is supposed to do? Does any software tests fail? These questions are easily answered by automated procedures or a simple yes or no. However assessing the students' comprehension and understanding of the completed assignments and carry out a qualitative evaluation is harder \cite{biggs1982evaluation}. The SOLO Taxonomy was proposed by Biggs and Collis in 1982. SOLO is abbreviated from Structure of the Observed Learning Outcome and the SOLO Taxonomy is used to qualitatively assess students' assignments. The SOLO Taxonomy consists of five levels of understanding: \textit{Prestructural}, \textit{Unistructural}, \textit{Multistructural}, \textit{Relational} and \textit{Extended Abstract}. In section \ref{sec:examples} the five levels of understanding are exemplified by the students' review texts.
 
 In \cite{mccracken2001multi} McCracken et al. evaluated first year Computer Science students' programming competency. Several universities took part in the study that showed disappointing results. To reverse the disappointing results a framework outlining the expectations of first year Computer Science students is proposed. However, the assessment is carried out in a quantitative way and there are no recommendations for any qualitative assessment methods.
 
@@ -102,7 +102,7 @@ In \cite{biggs1982evaluation} Biggs and Collis give recommendations for applying
 
 The analysis of the review texts are done in a web form and the SOLO level is stored in the same database table as the review texts. The web form removes all styling done by the students and due to the way the collection of review texts are done this further ensures the anonymity of the students. The anonymity of the students is important to ensure that the SOLO analysis is done without any reference to the final grade given to the students in the courses.
 
-After the review texts have been analyzed the SOLO level will be compared to the final grade of the course. The students' final grade will be fetched and stored in another database table together with the same traceable reference to the students. The final grade for the course and the SOLO level can now be compared and analyzed to evaluate if there is a correlation between the SOLO level and the final grade in the course.
+After the review texts have been analyzed the SOLO level is compared to the final grade of the course. The students' final grade is fetched and stored in another database table together with the same traceable reference to the students. The final grade for the course and the SOLO level can now be compared and analyzed to evaluate if there is a relation between the SOLO level and the final grade given to the student.
 
 The courses are graded based on the following criteria with a maximum of 100 points in total. 30 points for the completion of the six weekly assignments, 10 points for weekly extra assignments and extraordinary weekly review texts. 10 points for each mandatory requirement of the project and 10 points for each optional requirement of the project. The students are awarded credits on the ECTS-credit scale where more than 90 points equals an A, more than 80 equals B etc.
 
@@ -303,11 +303,11 @@ D & 20\% & 60\% & 20\% \\ [1ex]
 
 \section{Discussion}
 
-In table \ref{table:sum} and \ref{table:percentage} it can be observed that students receiving a final grade of A in the courses are more likely to hand in a Relational review text than students with a final grade of B or D. Relatively few students received a final grade of C and therefore the grades are skewed towards a higher number of Relational review texts. Despite the skewed distribution of grades students receiving a C there is relatively more A students handing in Relational review texts. Furthermore it can be observed that the students with a final grade of A to a lower degree than any other final grade answers with a Unistructural review text. This confirms the correlation between a higher grade and a deeper understanding and comprehension of the course material.
+During the study three of the author's colleagues read a subset of 20\% of the texts and did their own analysis. The SOLO level for three of the 12 analysis done by the author's colleagues differed by one level. In all three cases the author had given the students a higher SOLO level than the colleagues. The colleagues highlighted that the analysis were difficult as the written texts are long form and parts of the texts is a Multistructural review text and other parts is a Relational review texts. The author experienced the same classification problems during the analysis of the entire dataset. Shorter and more concise answers to specific problems would yield more easily analyzed and classifiable material.
+
+In table \ref{table:sum} and \ref{table:percentage} it can be observed that students receiving a final grade of A in the courses are more likely to hand in a Relational review text than students with a final grade of B or D. Relatively few students received a final grade of C and therefore the grades are skewed towards a higher number of Relational review texts. Despite the skewed distribution of grades students receiving a C there is relatively more A students handing in Relational review texts. Furthermore it can be observed that the students with a final grade of A to a lower degree than any other final grade answers with a Unistructural review text. This confirms the relation between a higher grade and a deeper understanding and comprehension of the course material. The correlation between the SOLO level and the final grade is not statistically significant, but a relation between final grade and SOLO level is shown. The more easily analyzed and classifiable dataset discussed above is similar to the material used in \cite{lister2006not}. The correlation shown in \cite{lister2006not} between SOLO responses and the level of programming experience is to a higher degree statistically significant.
 
 As a teacher you hope to see a positive trend in your students comprehension of the course material. The SOLO Taxonomy can be used to evaluate the comprehension and understanding that the students have obtained \cite{biggs1982evaluation}. The htmlphp in study period 1 is given as a beginners course in programming, but the actual level differs from complete novices to more advanced programmers. At the end of the linux course in study period 3 the students have studied programming courses worth 45 ECTS-credits. The students are now familiar with at least 10 programming languages and technologies and have moved from novices to more advanced programmers. According to Lister et al. in \cite{lister2006not} it is expected that advanced programmers answer with Relational answers and the results of this study confirms the results in \cite{lister2006not}. In tables \ref{table:solo} and \ref{table:solorelative} it is observed that the number of Relational review texts increase as the students progress through the three subsequent courses. Furthermore in tables \ref{table:solo} and \ref{table:solorelative} it is shown that the relative number of students answering with Multistructural review texts is constant and it is the Unistructural review texts that decreases as the Relational review texts increase. This further strengthens the observation that the students have a higher comprehension and understanding of the course material and programming in general.
-
-During the study three of the author's colleagues read a subset of 20\% of the texts and did their own analysis. The SOLO level for three of the 12 analysis done by the author's colleagues differed by one level. In all three cases the author had given the students a higher SOLO level than the colleagues. The colleagues highlighted that the analysis were difficult as the written texts are long form and parts of the texts would be a Multistructural review text and other parts is a Relational review texts. The author experienced the same classification problems during the analysis of the entire dataset. Shorter and more concise answers to specific problems would yield more easily analyzed and classifiable material.
 
 
 
@@ -315,7 +315,7 @@ During the study three of the author's colleagues read a subset of 20\% of the t
 
 \section{Conclusion}
 
-In \cite{lister2006not} the authors Lister et al. conclude that as a complement to programming exercises students should be assessed on written or think-aloud responses to programming assignments. The study described in this paper confirms that the final grade in programming courses correlate with the level of understanding of the course material. Therefore written assignments or review texts together with programming assignments can be used as a qualitative method in the assessment process. A recommendation is to complement programming exercises with written assignments where the students get an opportunity to reflect and expand on the completed exercises. This introduces a qualitative complement to the conventional quantitative assessment methods.
+In \cite{lister2006not} the authors Lister et al. conclude that as a complement to programming exercises students should be assessed on written or think-aloud responses to programming assignments. The study described in this paper confirms that the final grade in programming courses relate to the level of understanding of the course material. Therefore written assignments or review texts together with programming assignments can be used as a qualitative method in the assessment process. A recommendation is to complement programming exercises with written assignments where the students get an opportunity to reflect and expand on the completed exercises. This introduces a qualitative complement to the conventional quantitative assessment methods.
 
 Furthermore it is observed that the general level of comprehension and understanding of programming increases during the three subsequent courses that were analyzed in this paper. At the beginning of the educational program and the htmlphp course the level of programming skills varies a lot in the student cohort. At the end of the study period 3 and the linux course we see a more homogenized student cohort which further strengthens the notion that the general level of understanding and comprehension of the course material and programming in general is higher.
 
@@ -323,9 +323,9 @@ Furthermore it is observed that the general level of comprehension and understan
 
 %------------------------------------------------
 
-\section{Future Work}
+\section{Future Work} \label{future}
 
-Based on the observations of the both the author and the author's three colleagues a more suitable dataset would be shorter more concise answers to specific questions. Another study conducted with this type of dataset would be more easily analyzed and probably yield even clearer results.
+Based on the observations of the both the author and the author's three colleagues a more suitable dataset would be shorter more concise answers to specific questions. Another study conducted with this type of dataset would be more easily analyzed and probably yield clearer results.
 
 
 
@@ -333,7 +333,7 @@ Based on the observations of the both the author and the author's three colleagu
 
 \section{Acknowledgements}
 
-Thanks to Andreas Arnesson, Kenneth Lewenhagen, and Mikael Roos at Blekinge Tekniska Högskola for helping to ensure even SOLO levels by reading and analyzing a subset of the review texts.
+Thanks to Andreas Arnesson, Kenneth Lewenhagen and Mikael Roos at Blekinge Tekniska Högskola for helping to ensure even SOLO levels by reading and analyzing a subset of the review texts.
 
 
 
