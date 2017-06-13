@@ -1,7 +1,8 @@
 <!doctype html>
-<html lang="sv">
+<html lang="en">
+
 <meta charset="utf-8" />
-<title>GrillCon Rust</title>
+<title>Assessing Knowledge Through Written Reviews of First-Year Programming Students</title>
 
 <!-- Mithril HTML Slideshow styles -->
 <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Roboto+Condensed:300" rel="stylesheet">
@@ -24,229 +25,214 @@
         <h1 class="starter">Assessing Knowledge Through Written Reviews of First-Year Programming Students</h1>
     </div>
     <div class="pink rotator">&nbsp;</div>
-    <p>Emil Folino, efo@bth.se</p>
+    <p class="name">Emil Folino, efo@bth.se</p>
 </div>
 </script>
 
 
 
 <script data-role="slide" type="text/html">
-<h1>Webbspråk</h1>
-<h3>JavaScript, PHP, Python, Ruby</h3>
+    <div class="normal-slide">
+        <h1>dbwebb.se</h1>
+        <img src="img/dbwebb-plan.png" />
+    </div>
 </script>
 
 
 
 <script data-role="slide" type="text/html">
-<h1>Java?</h1>
+    <div class="normal-slide">
+        <h1>Quantitative assessment</h1>
+        <img src="img/quantitative.png" />
+    </div>
 </script>
 
 
 
 <script data-role="slide" type="text/html">
-<h1>C?</h1>
-<h3>Segmentation fault</h3>
+    <div class="normal-slide">
+        <h1>Qualitative assessment</h1>
+        <p class="quote">"I know that the reason is to separate general and domain-specific code, but I am not going to extend on this client so I have decided to put all the code in the same file."</p>
+    </div>
 </script>
 
 
 
 <script data-role="slide" type="text/html">
-<h1>Rust</h1>
-<h3>Kompilerar bort segfaults</h3>
-<h3>Minnes säkert</h3>
-<h3>Tråd säkert</h3>
+    <div class="normal-slide">
+        <h1>SOLO Taxonomy</h1>
+        <h3>Prestructural</h3>
+        <h3>Unistructural</h3>
+        <h3>Multistructural</h3>
+        <h3>Relational</h3>
+        <h3>Extended Abstract</h3>
+    </div>
 </script>
 
 
 
 <script data-role="slide" type="text/html">
-<h1>TSP</h1>
-<h3>11 högskolor</h3>
+    <div class="normal-slide">
+        <h1>Analysis</h1>
+        <p>
+            Fetched all review texts with a web scraper.
+        </p>
+        <p>
+            Read and analyzed entire dataset.
+        </p>
+        <p>
+            Colleagues read and analyzed subset.
+        </p>
+    </div>
 </script>
 
 
 
 <script data-role="slide" type="text/html">
-<img src="img/resan.png">
+    <div class="normal-slide">
+        <h1>SOLO Levels</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Course</th>
+                    <th>Relational</th>
+                    <th>Multistructural</th>
+                    <th>Unistructural</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>htmlphp</td>
+                    <td>4</td>
+                    <td>13</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>javascript1</td>
+                    <td>6</td>
+                    <td>8</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>linux</td>
+                    <td>9</td>
+                    <td>9</td>
+                    <td>0</td>
+                </tr>
+            </tbody>
+        </table>
+        <table>
+            <thead>
+                <tr>
+                    <th>Course</th>
+                    <th>Relational</th>
+                    <th>Multistructural</th>
+                    <th>Unistructural</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>htmlphp</td>
+                    <td>18%</td>
+                    <td>59%</td>
+                    <td>23%</td>
+                </tr>
+                <tr>
+                    <td>javascript1</td>
+                    <td>37.5%</td>
+                    <td>50%</td>
+                    <td>12.5%</td>
+                </tr>
+                <tr>
+                    <td>linux</td>
+                    <td>50%</td>
+                    <td>50%</td>
+                    <td>0%</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </script>
 
 
 
 <script data-role="slide" type="text/html">
-<p>BTH Lund Uppsala</p>
-<p>BTH Uppsala Lund</p>
-<p>Lund BTH Uppsala</p>
-<p>Lund Uppsala BTH</p>
-<p>Uppsala BTH Lund</p>
-<p>Uppsala Lund BTH</p>
+    <div class="normal-slide">
+        <h1>Final grades htmlphp</h1>
+        <img src="img/htmlphp.png" />
+    </div>
 </script>
 
 
 
 <script data-role="slide" type="text/html">
-<h3>11 högskoler</h3>
-<h3>11! permutationer</h3>
-<h3>~40 miljoner unika kombinationer</h3>
+    <div class="normal-slide">
+        <h1>Final grades javascript1</h1>
+        <img src="img/javascript1.png" />
+    </div>
 </script>
 
 
 
 <script data-role="slide" type="text/html">
-<pre data-code="tsp.pseudo"></pre>
-</script>
-
-
-
-<script id="tsp.pseudo" data-role="code" data-language="c" type="text/html">
-    The Countdown QuickPerm Algorithm:
-
-    let a[] a list of objects to permute
-    let N equal the length of a[]
-    p[] of size N+1 to control the iteration
-    initialize p[0] to 0, p[1] to 1, ..., p[N] to N
-    initialize variable i to 1
-    while (i < N) do {
-        decrement p[i] by 1
-        if i is odd, then let j = p[i] otherwise let j = 0
-        swap(a[j], a[i])
-        let i = 1
-        while (p[i] is equal to 0) do {
-            let p[i] = i
-            increment i by 1
-        } // end while (p[i] is equal to 0)
-    } // end while (i < N)
+    <div class="normal-slide">
+        <h1>Final grades linux</h1>
+        <img src="img/linux.png" />
+    </div>
 </script>
 
 
 
 <script data-role="slide" type="text/html">
-<pre data-code="tsp_rustc.rs"></pre>
-</script>
-
-
-
-<script id="tsp_rustc.rs" data-role="code" data-language="c" type="text/html">
-    while i < n {
-        p[i] -= 1;
-        let j = i % 2 * p[i];
-        cities.swap(i, j);
-
-        let mut trip_length = 0.0;
-
-        for pair in cities.windows(2) {
-            let (_, lat0, long0) = universities[pair[0]];
-            let (_, lat1, long1) = universities[pair[1]];
-
-            trip_length += ((lat1 - lat0).powi(2) + (long1 - long0).powi(2)).sqrt();
-        }
-
-        if trip_length < shortest_trip {
-            shortest_trip = trip_length;
-            shortest_trip_universities = cities.to_vec();
-        }
-
-        i = 1;
-        while p[i] == 0 {
-            p[i] = i;
-            i += 1;
-        }
-    }
-</script>
-
-
-
-<script data-role="slide" type="text/html">
-<h1>Prestanda</h1>
-</script>
-
-
-
-<script data-role="slide" type="text/html">
-    <pre data-code="test.bash"></pre>
-</script>
-
-
-
-<script id="test.bash" data-role="code" data-language="bash" type="text/html">
-$ rustc -C opt-level=3 -C target-cpu=native tsp_rustc.rs
-$ time ./tsp_rustc
-Shortest trip length: 21.058498609348383
-BTH --> Linné --> Lund --> Chalmers --> Karlstad --> Örebro --> Linköping --> KTH --> Uppsala --> Umeå --> Luleå
-
-real	0m1.831s
-user	0m1.821s
-sys	0m0.004s
-
+    <div class="normal-slide">
+        <h1>Final grades</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Grade</th>
+                    <th>Relational</th>
+                    <th>Multistructural</th>
+                    <th>Unistructural</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>A</td>
+                    <td>38%</td>
+                    <td>57%</td>
+                    <td>5%</td>
+                </tr>
+                <tr>
+                    <td>B</td>
+                    <td>20%</td>
+                    <td>70%</td>
+                    <td>10%</td>
+                </tr>
+                <tr>
+                    <td>C</td>
+                    <td>33%</td>
+                    <td>50%</td>
+                    <td>17%</td>
+                </tr>
+                <tr>
+                    <td>D</td>
+                    <td>20%</td>
+                    <td>60%</td>
+                    <td>20%</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </script>
 
 
 
 <script data-role="slide" type="text/html">
-<table>
-<thead>
-    <tr>
-        <th></th>
-        <th>Tid</th>
-    </tr>
-</thead>
-<tbody>
-    <tr>
-        <td>Python</td>
-        <td>7m 27.620s</td>
-    </tr>
-
-    <tr>
-        <td>Ruby</td>
-        <td>4m 12.508s</td>
-    </tr>
-
-    <tr>
-        <td>Python itertools</td>
-        <td>3m 44.372s</td>
-    </tr>
-
-    <tr>
-        <td>PHP5.6</td>
-        <td>3m 53.114s</td>
-    </tr>
-
-    <tr>
-        <td>PHP7</td>
-        <td>2m 0.664s</td>
-    </tr>
-
-    <tr>
-        <td>JavaScript (nodejs)</td>
-        <td>0m 23.926s</td>
-    </tr>
-
-    <tr>
-        <td>Java</td>
-        <td>A</td>
-    </tr>
-
-    <tr>
-        <td>C</td>
-        <td>B</td>
-    </tr>
-
-    <tr>
-        <td>Rust hash tables</td>
-        <td>0m 18.443s</td>
-    </tr>
-
-    <tr>
-        <td>Rust slices</td>
-        <td>0m 1.539s</td>
-    </tr>
-</tbody>
-</table>
-</script>
-
-
-
-<script data-role="slide" type="text/html">
-<h1>Ska vi gå nära metallen?</h1>
+    <div class="normal-slide">
+        <h1>Recommendation</h1>
+        <p>Give students opportunity to reflect</p>
+        <p>Gain valuable insight into course development</p>
+    </div>
 </script>
 
 
